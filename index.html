@@ -1,94 +1,444 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="it">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.3">
-  <style type="text/css">
-    body {background-color: #0d0d0d}
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 22.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.45); -webkit-text-stroke: rgba(255, 255, 255, 0.45)}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px '.Apple Color Emoji UI'; color: #ece9e0; -webkit-text-stroke: #ece9e0}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; color: #ece9e0; -webkit-text-stroke: #ece9e0}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px 'Helvetica Neue'; color: #676562; -webkit-text-stroke: #676562}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #676562; -webkit-text-stroke: #676562}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; color: #ece9e0; color: rgba(236, 233, 224, 0.75); -webkit-text-stroke: rgba(236, 233, 224, 0.75)}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px 'Helvetica Neue'; color: #ece9e0; -webkit-text-stroke: #ece9e0}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 28.0px '.Apple Color Emoji UI'; color: #ece9e0; -webkit-text-stroke: #ece9e0}
-    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.5px 'Helvetica Neue'; color: #676562; -webkit-text-stroke: #676562}
-    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px 'Helvetica Neue'; color: #37c87b; -webkit-text-stroke: #37c87b}
-    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #ece9e0; -webkit-text-stroke: #ece9e0; background-color: #4a73ff; min-height: 15.0px}
-    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #ece9e0; -webkit-text-stroke: #ece9e0; background-color: #37c87b; min-height: 15.0px}
-    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; font: 36.0px 'Helvetica Neue'; color: #fc5329; -webkit-text-stroke: #fc5329}
-    span.s1 {font-kerning: none; background-color: #fc5329}
-    span.s2 {font-kerning: none}
-    span.s3 {font: 11.0px '.Apple Color Emoji UI'; font-kerning: none}
-    span.s4 {font-kerning: none; background-color: #131313}
-    span.s5 {font: 13.0px 'Helvetica Neue'; font-kerning: none}
-    span.s6 {font: 10.0px 'Helvetica Neue'; font-kerning: none; color: #676562; -webkit-text-stroke: 0px #676562}
-    span.s7 {font: 11.0px 'Helvetica Neue'; font-kerning: none; color: #676562; -webkit-text-stroke: 0px #676562}
-    span.s8 {font: 14.0px 'Helvetica Neue'; font-kerning: none}
-    span.s9 {font: 28.0px '.Apple Color Emoji UI'; font-kerning: none}
-    span.s10 {font: 15.0px 'Helvetica Neue'; font-kerning: none}
-    span.s11 {font: 11.5px 'Helvetica Neue'; font-kerning: none; color: #676562; -webkit-text-stroke: 0px #676562}
-    span.s12 {font: 10.0px '.Apple Color Emoji UI'; font-kerning: none; background-color: rgba(55, 200, 123, 0.12)}
-    span.s13 {font-kerning: none; background-color: rgba(55, 200, 123, 0.12)}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michele Mariniello</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0f0f0f;
+      --surface: #181818;
+      --surface2: #222222;
+      --border: rgba(255,255,255,0.07);
+      --border-hover: rgba(255,255,255,0.14);
+      --text: #f0ede6;
+      --muted: #7a7875;
+      --accent: #ff6b35;
+      --accent2: #5b8cff;
+      --accent3: #3ecf8e;
+      --radius: 16px;
+      --gap: 12px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Syne', sans-serif;
+      min-height: 100vh;
+      padding: 40px 20px 80px;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* BENTO GRID */
+    .bento {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 140px;
+      gap: var(--gap);
+    }
+
+    /* BASE CARD */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s, background 0.2s;
+      cursor: default;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .card:hover {
+      border-color: var(--border-hover);
+      background: var(--surface2);
+      transform: translateY(-2px);
+    }
+
+    a.card { text-decoration: none; color: inherit; cursor: pointer; }
+
+    /* SPAN HELPERS */
+    .span-2 { grid-column: span 2; }
+    .span-3 { grid-column: span 3; }
+    .row-2  { grid-row: span 2; }
+
+    /* HERO CARD */
+    .card-hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      justify-content: flex-start;
+      padding: 28px;
+    }
+    .card-hero .avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 14px;
+      letter-spacing: -1px;
+      flex-shrink: 0;
+    }
+    .card-hero h1 {
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.15;
+      color: #fff;
+      letter-spacing: -0.5px;
+    }
+    .card-hero .role {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: rgba(255,255,255,0.45);
+      margin-top: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ABOUT CARD */
+    .card-about {
+      justify-content: flex-start;
+    }
+    .card-about .label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .card-about p {
+      font-size: 13px;
+      line-height: 1.6;
+      color: rgba(240,237,230,0.75);
+      font-weight: 400;
+    }
+
+    /* PROJECT CARD */
+    .card-project {
+      justify-content: flex-end;
+    }
+    .card-project .proj-icon {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .card-project h3 {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 5px;
+    }
+    .card-project p {
+      font-size: 11.5px;
+      color: var(--muted);
+      line-height: 1.5;
+      font-family: 'DM Mono', monospace;
+    }
+    .card-project .arrow {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 28px;
+      height: 28px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .card:hover .arrow { opacity: 1; }
+
+    /* ACCENT STRIPE */
+    .stripe-orange { border-top: 2px solid var(--accent); }
+    .stripe-blue   { border-top: 2px solid var(--accent2); }
+    .stripe-green  { border-top: 2px solid var(--accent3); }
+
+    /* SOCIAL / LINK CARD */
+    .card-link {
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    .card-link .link-icon {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+    .card-link .link-name {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+    .card-link .link-sub {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+    }
+    .card-link .ext {
+      position: absolute;
+      bottom: 18px;
+      right: 18px;
+      font-size: 11px;
+      color: var(--muted);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .card:hover .ext { opacity: 1; }
+
+    /* SKILLS CARD */
+    .card-skills { justify-content: flex-start; }
+    .card-skills .label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      padding: 4px 9px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: transparent;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .card:hover .tag {
+      border-color: rgba(255,255,255,0.15);
+      color: rgba(240,237,230,0.7);
+    }
+
+    /* LOCATION / STAT CARD */
+    .card-stat {
+      align-items: flex-start;
+    }
+    .card-stat .big {
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -2px;
+      margin-bottom: 6px;
+    }
+    .card-stat .sub {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* HACKATHON CARD */
+    .card-hack {
+      background: linear-gradient(135deg, #1a2a1a 0%, #0d1f0d 100%);
+      justify-content: flex-end;
+    }
+    .card-hack .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(62,207,142,0.12);
+      border: 1px solid rgba(62,207,142,0.25);
+      border-radius: 20px;
+      padding: 3px 10px;
+      font-size: 10px;
+      font-family: 'DM Mono', monospace;
+      color: var(--accent3);
+      margin-bottom: 10px;
+      width: fit-content;
+    }
+
+    /* CURRENTLY LEARNING */
+    .card-learning {
+      background: linear-gradient(135deg, #1e1a2e 0%, #2a1a1a 100%);
+      justify-content: flex-start;
+    }
+    .progress-items { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
+    .progress-item {}
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .progress-bar {
+      height: 3px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      border-radius: 2px;
+      background: var(--accent2);
+    }
+
+    /* NOISE OVERLAY for some cards */
+    .card-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .bento {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 130px;
+      }
+      .span-3 { grid-column: span 2; }
+    }
+
+    @media (max-width: 380px) {
+      .bento { grid-template-columns: 1fr; }
+      .span-2, .span-3 { grid-column: span 1; }
+    }
   </style>
 </head>
 <body>
-<p class="p1"><span class="s1">MM</span></p>
-<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 22.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff"><span class="s2">Michele<br>
-Mariniello</span></h1>
-<p class="p2"><span class="s2">Computer Engineering · iOS Dev · Napoli </span><span class="s3">🇮🇹</span></p>
-<p class="p3"><span class="s4"><a href="https://www.linkedin.com/in/michele-mariniello-317a2a364/">💼<span class="s2"></span></a></span></p>
-<p class="p4"><span class="s4"><a href="https://www.linkedin.com/in/michele-mariniello-317a2a364/">LinkedIn<span class="s5"></span></a></span></p>
-<p class="p5"><span class="s4"><a href="https://www.linkedin.com/in/michele-mariniello-317a2a364/">michele-mariniello<span class="s6"></span></a></span></p>
-<p class="p6"><span class="s4"><a href="https://www.linkedin.com/in/michele-mariniello-317a2a364/">↗<span class="s7"></span></a></span></p>
-<p class="p3"><span class="s4"><a href="https://github.com/MicheleMariniello">🐙<span class="s2"></span></a></span></p>
-<p class="p4"><span class="s4"><a href="https://github.com/MicheleMariniello">GitHub<span class="s5"></span></a></span></p>
-<p class="p5"><span class="s4"><a href="https://github.com/MicheleMariniello">MicheleMariniello<span class="s6"></span></a></span></p>
-<p class="p6"><span class="s4"><a href="https://github.com/MicheleMariniello">↗<span class="s7"></span></a></span></p>
-<p class="p5"><span class="s4">ABOUT</span></p>
-<p class="p7"><span class="s4">Studente magistrale in Ingegneria Informatica. Mi occupo di sviluppo iOS con Swift/SwiftUI, machine learning e cybersecurity. Apple Developer Academy alumni, vincitore di hackathon. Appassionato di AI e tecnologia.</span></p>
-<p class="p8"><span class="s4"><a href="https://apps.apple.com/it/app/lunepoker/id6744165809?l=en-GB">↗<span class="s8"></span></a></span></p>
-<p class="p9"><span class="s4"><a href="https://apps.apple.com/it/app/lunepoker/id6744165809?l=en-GB">🃏<span class="s9"></span></a></span></p>
-<h3 style="margin: 0.0px 0.0px 5.0px 0.0px; font: 15.0px 'Helvetica Neue'; color: #ece9e0; -webkit-text-stroke: #ece9e0"><span class="s4"><a href="https://apps.apple.com/it/app/lunepoker/id6744165809?l=en-GB">LunePoker<span class="s10"></span></a></span></h3>
-<p class="p11"><span class="s4"><a href="https://apps.apple.com/it/app/lunepoker/id6744165809?l=en-GB">iOS app per tracking partite di poker · Swift/SwiftUI · Firebase<span class="s11"></span></a></span></p>
-<p class="p12"><span class="s12">🏆</span><span class="s13"> 1° posto</span></p>
-<h3 style="margin: 0.0px 0.0px 4.0px 0.0px; font: 14.0px 'Helvetica Neue'; color: #ece9e0; -webkit-text-stroke: #ece9e0"><span class="s2">AI4PURPOSE</span></h3>
-<p class="p6"><span class="s2">Student Track winner · Floody project</span></p>
-<p class="p8"><span class="s4">↗</span></p>
-<p class="p9"><span class="s4">🧠</span></p>
-<h3 style="margin: 0.0px 0.0px 5.0px 0.0px; font: 15.0px 'Helvetica Neue'; color: #ece9e0; -webkit-text-stroke: #ece9e0"><span class="s4">NevralgiApp</span></h3>
-<p class="p11"><span class="s4">Attack tracker · iOS · SwiftUI · PDF export</span></p>
-<p class="p5"><span class="s4">SKILLS</span></p>
-<p class="p5"><span class="s4">Swift</span></p>
-<p class="p5"><span class="s4">SwiftUI</span></p>
-<p class="p5"><span class="s4">Firebase</span></p>
-<p class="p5"><span class="s4">Python</span></p>
-<p class="p5"><span class="s4">C/C++</span></p>
-<p class="p5"><span class="s4">TensorFlow</span></p>
-<p class="p5"><span class="s4">iOS Dev</span></p>
-<p class="p5"><span class="s4">Git</span></p>
-<p class="p5"><span class="s4">Cybersecurity</span></p>
-<p class="p5"><span class="s2">LEARNING</span></p>
-<p class="p5"><span class="s2">C/C++ Cert.</span></p>
-<p class="p5"><span class="s2">80%</span></p>
-<p class="p14"><span class="s2"></span><br></p>
-<p class="p5"><span class="s2">Cybersecurity</span></p>
-<p class="p5"><span class="s2">100%</span></p>
-<p class="p15"><span class="s2"></span><br></p>
-<p class="p3"><span class="s4"><a href="mailto:michele-mariniello97@libero.it">✉️<span class="s2"></span></a></span></p>
-<p class="p4"><span class="s4"><a href="mailto:michele-mariniello97@libero.it">Email<span class="s5"></span></a></span></p>
-<p class="p5"><span class="s4"><a href="mailto:michele-mariniello97@libero.it">michele-mariniello97@libero.it<span class="s6"></span></a></span></p>
-<p class="p6"><span class="s4"><a href="mailto:michele-mariniello97@libero.it">→<span class="s7"></span></a></span></p>
-<p class="p16"><span class="s4">NA</span></p>
-<p class="p6"><span class="s4">Napoli, Italia</span></p>
-<p class="p8"><span class="s4"><a href="https://apps.apple.com/it/app/bug-busters/id6747584160?l=en-GB">↗<span class="s8"></span></a></span></p>
-<p class="p9"><span class="s4"><a href="https://apps.apple.com/it/app/bug-busters/id6747584160?l=en-GB">🎮<span class="s9"></span></a></span></p>
-<h3 style="margin: 0.0px 0.0px 5.0px 0.0px; font: 15.0px 'Helvetica Neue'; color: #ece9e0; -webkit-text-stroke: #ece9e0"><span class="s4"><a href="https://apps.apple.com/it/app/bug-busters/id6747584160?l=en-GB">BugBusters<span class="s10"></span></a></span></h3>
-<p class="p11"><span class="s4"><a href="https://apps.apple.com/it/app/bug-busters/id6747584160?l=en-GB">Arcade game · iOS · App Store<span class="s11"></span></a></span></p>
+  <div class="container">
+    <div class="bento">
+
+      <!-- HERO -->
+      <div class="card card-hero span-2 row-2">
+        <div class="avatar">MM</div>
+        <h1>Michele<br>Mariniello</h1>
+        <p class="role">Computer Engineering · iOS Dev · Napoli 🇮🇹</p>
+      </div>
+
+      <!-- LINKEDIN -->
+      <a class="card card-link stripe-blue" href="https://www.linkedin.com/in/michele-mariniello-317a2a364/" target="_blank" rel="noopener">
+        <div>
+          <div class="link-icon">💼</div>
+          <div class="link-name">LinkedIn</div>
+          <div class="link-sub">michele-mariniello</div>
+        </div>
+        <span class="ext">↗</span>
+      </a>
+
+      <!-- GITHUB -->
+      <a class="card card-link stripe-blue" href="https://github.com/MicheleMariniello" target="_blank" rel="noopener">
+        <div>
+          <div class="link-icon">🐙</div>
+          <div class="link-name">GitHub</div>
+          <div class="link-sub">MicheleMariniello</div>
+        </div>
+        <span class="ext">↗</span>
+      </a>
+
+      <!-- ABOUT -->
+      <div class="card card-about span-3">
+        <div class="label">About</div>
+        <p>
+          Studente magistrale in Ingegneria Informatica. Mi occupo di sviluppo iOS con Swift/SwiftUI, machine learning e cybersecurity. 
+          Apple Developer Academy alumni, vincitore di hackathon. Appassionato di AI e tecnologia.
+        </p>
+      </div>
+
+      <!-- PROJECT: LunePoker -->
+      <a class="card card-project stripe-orange span-2" href="https://apps.apple.com/it/app/lunepoker/id6744165809?l=en-GB" target="_blank" rel="noopener">
+        <span class="arrow">↗</span>
+        <div class="proj-icon">🃏</div>
+        <h3>LunePoker</h3>
+        <p>iOS app per tracking partite di poker · Swift/SwiftUI · Firebase</p>
+      </a>
+
+      <!-- HACKATHON BADGE -->
+      <div class="card card-hack">
+        <div class="badge">🏆 1° posto</div>
+        <h3 style="font-size:14px; font-weight:700; margin-bottom:4px;">AI4PURPOSE</h3>
+        <p style="font-size:11px; font-family:'DM Mono',monospace; color:var(--muted);">Student Track winner · Floody project</p>
+      </div>
+
+      <!-- PROJECT: NevralgiApp -->
+      <a class="card card-project stripe-orange" href="#" target="_blank" rel="noopener">
+        <span class="arrow">↗</span>
+        <div class="proj-icon">🧠</div>
+        <h3>NevralgiApp</h3>
+        <p>Attack tracker · iOS · SwiftUI · PDF export</p>
+      </a>
+
+      <!-- SKILLS -->
+      <div class="card card-skills span-2">
+        <div class="label">Skills</div>
+        <div class="tags">
+          <span class="tag">Swift</span>
+          <span class="tag">SwiftUI</span>
+          <span class="tag">Firebase</span>
+          <span class="tag">Python</span>
+          <span class="tag">C/C++</span>
+          <span class="tag">TensorFlow</span>
+          <span class="tag">iOS Dev</span>
+          <span class="tag">Git</span>
+          <span class="tag">Cybersecurity</span>
+        </div>
+      </div>
+
+      <!-- CURRENTLY LEARNING -->
+      <div class="card card-learning">
+        <div class="label" style="font-family:'DM Mono',monospace; font-size:10px; color:var(--muted); letter-spacing:1px; text-transform:uppercase; margin-bottom:10px;">Learning</div>
+        <div class="progress-items">
+          <div class="progress-item">
+            <div class="progress-label"><span>C/C++ Cert.</span><span>80%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width:80%; background:var(--accent2);"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-label"><span>Cybersecurity</span><span>100%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width:100%; background:var(--accent3);"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EMAIL -->
+      <a class="card card-link" href="mailto:michele-mariniello97@libero.it">
+        <div>
+          <div class="link-icon">✉️</div>
+          <div class="link-name">Email</div>
+          <div class="link-sub">michele-mariniello97@libero.it</div>
+        </div>
+        <span class="ext">→</span>
+      </a>
+
+      <!-- LOCATION -->
+      <div class="card card-stat">
+        <div class="big" style="color:var(--accent);">NA</div>
+        <div class="sub">Napoli, Italia</div>
+      </div>
+
+      <!-- PROJECT: BugBusters o altro -->
+      <a class="card card-project stripe-green span-1" href="https://apps.apple.com/it/app/bug-busters/id6747584160?l=en-GB" target="_blank" rel="noopener">
+        <span class="arrow">↗</span>
+        <div class="proj-icon">🎮</div>
+        <h3>BugBusters</h3>
+        <p>Arcade game · iOS · App Store</p>
+      </a>
+
+    </div>
+  </div>
 </body>
 </html>
