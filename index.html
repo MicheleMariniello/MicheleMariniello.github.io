@@ -41,7 +41,7 @@
     /* BENTO GRID */
     .bento {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       grid-auto-rows: 140px;
       gap: var(--gap);
     }
@@ -306,17 +306,17 @@
     }
 
     /* RESPONSIVE */
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       .bento {
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 130px;
       }
-      .span-3 { grid-column: span 2; }
+      .span-3, .span-4 { grid-column: span 2; }
     }
 
-    @media (max-width: 380px) {
+    @media (max-width: 420px) {
       .bento { grid-template-columns: 1fr; }
-      .span-2, .span-3 { grid-column: span 1; }
+      .span-2, .span-3, .span-4 { grid-column: span 1; }
     }
   </style>
 </head>
@@ -325,14 +325,14 @@
     <div class="bento">
 
       <!-- HERO -->
-      <div class="card card-hero span-2 row-3">
+      <div class="card card-hero" style="grid-column:1/4; grid-row:1/3;">
         <div class="avatar">MM</div>
         <h1>Michele<br>Mariniello</h1>
         <p class="role">Computer Engineering · iOS Dev · Napoli 🇮🇹</p>
       </div>
 
       <!-- LINKEDIN -->
-      <a class="card card-link stripe-blue" href="https://www.linkedin.com/in/michele-mariniello-317a2a364/" target="_blank" rel="noopener">
+      <a class="card card-link stripe-blue" style="grid-column:4; grid-row:1;" href="https://www.linkedin.com/in/michele-mariniello-317a2a364/" target="_blank" rel="noopener">
         <div>
           <div class="link-icon">💼</div>
           <div class="link-name">LinkedIn</div>
@@ -342,7 +342,7 @@
       </a>
 
       <!-- COURSERA -->
-      <a class="card card-link stripe-blue" href="https://www.coursera.org/user/06923a5e16c1dedb15cb503c2a102bed" target="_blank" rel="noopener">
+      <a class="card card-link stripe-blue" style="grid-column:4; grid-row:2;" href="https://www.coursera.org/user/06923a5e16c1dedb15cb503c2a102bed" target="_blank" rel="noopener">
         <div>
           <div class="link-icon">🎓</div>
           <div class="link-name">Coursera</div>
@@ -351,8 +351,17 @@
         <span class="ext">↗</span>
       </a>
 
+      <!-- ABOUT -->
+      <div class="card card-about" style="grid-column:1/4; grid-row:3;">
+        <div class="label">About</div>
+        <p>
+          Studente magistrale in Ingegneria Informatica. Mi occupo di sviluppo iOS con Swift/SwiftUI, machine learning e cybersecurity. 
+          Apple Developer Academy alumni, vincitore di hackathon. Appassionato di AI e tecnologia.
+        </p>
+      </div>
+
       <!-- GITHUB -->
-      <a class="card card-link stripe-blue" href="https://github.com/MicheleMariniello" target="_blank" rel="noopener">
+      <a class="card card-link stripe-blue" style="grid-column:4; grid-row:3;" href="https://github.com/MicheleMariniello" target="_blank" rel="noopener">
         <div>
           <div class="link-icon">🐙</div>
           <div class="link-name">GitHub</div>
@@ -361,17 +370,8 @@
         <span class="ext">↗</span>
       </a>
 
-      <!-- ABOUT -->
-      <div class="card card-about span-2">
-        <div class="label">About</div>
-        <p>
-          Studente magistrale in Ingegneria Informatica. Mi occupo di sviluppo iOS con Swift/SwiftUI, machine learning e cybersecurity. 
-          Apple Developer Academy alumni, vincitore di hackathon. Appassionato di AI e tecnologia.
-        </p>
-      </div>
-
       <!-- PROJECT: LunePoker -->
-      <a class="card card-project stripe-orange span-2" href="https://apps.apple.com/it/app/lunepoker/id6744165809?l=en-GB" target="_blank" rel="noopener">
+      <a class="card card-project stripe-orange span-3" href="https://apps.apple.com/it/app/lunepoker/id6744165809?l=en-GB" target="_blank" rel="noopener">
         <span class="arrow">↗</span>
         <div class="proj-icon">🃏</div>
         <h3>LunePoker</h3>
@@ -387,7 +387,7 @@
       </a>
 
       <!-- PROJECT: NevralgiApp -->
-      <a class="card card-project stripe-orange span-2" href="#" target="_blank" rel="noopener">
+      <a class="card card-project stripe-orange span-3" href="#" target="_blank" rel="noopener">
         <span class="arrow">↗</span>
         <div class="proj-icon">🧠</div>
         <h3>NevralgiApp</h3>
@@ -402,7 +402,7 @@
       </div>
 
       <!-- SKILLS -->
-      <div class="card card-skills span-2">
+      <div class="card card-skills span-3">
         <div class="label">Skills</div>
         <div class="tags">
           <span class="tag">Swift</span>
@@ -426,14 +426,18 @@
             <div class="progress-bar"><div class="progress-fill" style="width:80%; background:var(--accent2);"></div></div>
           </div>
           <div class="progress-item">
-            <div class="progress-label"><span>Cybersecurity</span><span>100%</span></div>
+            <div class="progress-label"><span>Machine Learning</span><span>100%</span></div>
             <div class="progress-bar"><div class="progress-fill" style="width:100%; background:var(--accent3);"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-label"><span>Cybersecurity</span><span>30%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width:30%; background:var(--accent2);"></div></div>
           </div>
         </div>
       </div>
 
       <!-- EMAIL -->
-      <a class="card card-link" href="mailto:michele-mariniello97@libero.it">
+      <a class="card card-link span-2" href="mailto:michele-mariniello97@libero.it">
         <div>
           <div class="link-icon">✉️</div>
           <div class="link-name">Email</div>
@@ -443,7 +447,7 @@
       </a>
 
       <!-- LOCATION -->
-      <div class="card card-stat">
+      <div class="card card-stat span-2">
         <div class="big" style="color:var(--accent);">NA</div>
         <div class="sub">Napoli, Italia</div>
       </div>
